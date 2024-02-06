@@ -1,0 +1,39 @@
+@keyframes rotate-left {
+  from {
+    transform: rotate(0) translate(250px);
+  }
+  to {
+    transform: translate(0%) rotate(-0.25turn);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translate(250px);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+
+.rotate-left {
+  animation-name: rotate-left;
+  animation-duration: 0.25s;
+}
+
+.rotate-back {
+  animation-name: rotate-left;
+  animation-duration: 0.25s;
+  animation-direction: reverse;
+}
+
+.slide-left {
+  animation-name: slide-left;
+  animation-duration: 0.25s;
+}
+
+.slide-back {
+  animation-name: slide-left;
+  animation-duration: 0.25s;
+  animation-direction: reverse;
+}
