@@ -1,0 +1,100 @@
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-in-half {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 50%;
+  }
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(0) translate(250px);
+  }
+
+  to {
+    transform: translate(0%) rotate(-0.25turn);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translate(250px);
+  }
+
+  to {
+    transform: translate(0%);
+  }
+}
+
+@keyframes slide-back {
+  from {
+    transform: translate(0%);
+  }
+
+  to {
+    transform: translate(250px);
+  }
+}
+
+@keyframes better-bounce {
+  0%,
+  100% {
+    transform: translateY(0%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  50% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+
+.fade-in-half {
+  animation-name: fade-in-half;
+  animation-duration: 2s;
+}
+
+.rotate-left {
+  animation-name: rotate-left;
+  animation-duration: 0.25s;
+}
+
+.rotate-back {
+  animation-name: rotate-left;
+  animation-duration: 0.25s;
+  animation-direction: reverse;
+}
+
+.slide-left {
+  animation-name: slide-left;
+  animation-duration: 0.25s;
+}
+
+.slide-back {
+  animation-name: slide-left;
+  animation-duration: 0.25s;
+  animation-direction: reverse;
+}
+
+.better-bounce {
+  animation-name: better-bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
