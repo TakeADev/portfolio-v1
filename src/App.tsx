@@ -4,6 +4,7 @@ import Navigation from './components/nav/Navigation'
 import Hero from './components/hero/Hero'
 import About from './components/sections/About'
 import AnimationContextProvider from './contexts/AnimationContext'
+import Projects from './components/sections/projects/Projects'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navigation />
         <Hero />
         <About />
+        <Projects />
       </AnimationContextProvider>
     </Router>
   )
