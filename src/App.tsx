@@ -1,15 +1,20 @@
 import './App.css'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Navigation from './components/Navigation'
-import Hero from './components/Hero'
-import About from './components/About'
+import Navigation from './components/nav/Navigation'
+import Hero from './components/hero/Hero'
+import About from './components/sections/About'
+import AnimationContextProvider from './contexts/AnimationContext'
+import Projects from './components/sections/projects/Projects'
 
 function App() {
   return (
     <Router>
-      <Navigation />
-      <Hero />
-      <About />
+      <AnimationContextProvider>
+        <Navigation />
+        <Hero />
+        <About />
+        <Projects />
+      </AnimationContextProvider>
     </Router>
   )
 }
