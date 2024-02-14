@@ -21,9 +21,9 @@ const Navigation = () => {
 
   return (
     !typeAnimationIsPlaying && (
-      <div className={`fade-in fixed right-0 top-0 flex text-3xl bg-[#262338] bg-opacity-70`}>
+      <div className={`fade-in fixed right-0 top-0 flex text-2xl bg-[#262338] bg-opacity-70`}>
         <MdOutlineMenu
-          className={`w-12 text-5xl mr-5 mt-2 lg:hidden ${menuIsOpen && ' rotate-left -rotate-90'}`}
+          className={`w-12 text-5xl mr-5 mt-2 lg:hidden ml-3 mb-2 ${menuIsOpen && ' rotate-left -rotate-90'}`}
           onClick={menuClickHandler}
         />
         <nav
