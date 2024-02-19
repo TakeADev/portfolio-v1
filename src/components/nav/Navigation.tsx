@@ -1,8 +1,7 @@
 import { useState, useContext } from 'react'
 
 import { MdOutlineMenu } from 'react-icons/md'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { FiGithub } from 'react-icons/fi'
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 import { NavLink, Link } from 'react-router-dom'
 
@@ -43,16 +42,18 @@ const Navigation = () => {
           >
             <span>Contact Me</span>
           </NavLink>
-          <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
-            <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50'>
-              <FaLinkedinIn className='text-4xl ' />
-            </div>
-          </Link>
-          <Link to={'https://github.com/TakeADev'} target='_blank'>
-            <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50'>
-              <FiGithub className='text-4xl ' />
-            </div>
-          </Link>
+          <div className='flex ml-auto'>
+            <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
+              <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
+                <FaLinkedinIn className='text-3xl mx-auto' />
+              </div>
+            </Link>
+            <Link to={'https://github.com/TakeADev'} target='_blank'>
+              <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
+                <FaGithub className='text-3xl mx-auto' />
+              </div>
+            </Link>
+          </div>
         </nav>
       </div>
     )
