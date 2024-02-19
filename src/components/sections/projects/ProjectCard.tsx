@@ -9,6 +9,7 @@ import '../../../animations/animations.css'
 
 interface IProjectCardProps {
   title: string
+  desc: string
   imgSrc: string
   imgAlt: string
   linkToCode: string
@@ -17,31 +18,41 @@ interface IProjectCardProps {
 
 const ProjectCard: FunctionComponent<IProjectCardProps> = ({
   title,
+  desc,
   imgSrc,
   imgAlt,
   linkToCode,
   linkToPreview,
 }) => {
+  // TODO: Impliment tags. Each product is tagged with technologies. User able to filter by tag
   return (
-    <div className='flex flex-col w-4/5 lg:w-1/2 bg-black bg-opacity-30 border border-[#7390A3] mx-auto'>
-      <div className='w-full text-center mt-5'>
-        <h3 className='text-2xl'>{title}</h3>
+    <div className='w-full lg:w-3/4 flex flex-col mx-auto bg-black bg-opacity-30 border border-[#7390A3]'>
+      <div className='flex w-full mx-auto'>
+        <div>
+          <h2 className='text-4xl my-5'>{title}</h2>
+          <p className='text-lg'>{desc}</p>
+        </div>
       </div>
-      <img
-        src={imgSrc}
-        alt={imgAlt}
-        className='mx-auto object-cover w-3/4 mt-5 h-[500px] object-top'
-      />
-      <Link to={linkToCode} target='_blank' className='text-center w-1/2 mx-auto'>
-        <button className='bg-[#7390A3] w-full mx-auto rounded-lg py-1 mt-5 text-lg grow-on-hover'>
-          <FaGithub className='inline -mt-1' /> Code
-        </button>
-      </Link>
-      <Link to={linkToPreview} className='text-center w-1/2 mx-auto' target='_blank'>
-        <button className='bg-[#C5A9BE] w-full mx-auto rounded-lg py-1 mt-5 mb-5 text-lg grow-on-hover'>
-          <MdPreview className='inline -mt-1' /> Preview
-        </button>
-      </Link>
+      <div className='flex w-full p-10'>
+        <img
+          src={imgSrc}
+          className=' top-0 w-full object-cover border border-[#7390A3] rounded-md'
+        />
+      </div>
+      <div>
+        <div className='w-1/2 text-[#262338] mx-auto text-center py-2 mb-10 rounded-lg bg-[#C5A9BE]'>
+          <Link to={linkToCode} className='text-3xl' target='_blank'>
+            <FaGithub className='inline mr-5 -mt-1' />
+            <span className=''>Code</span>
+          </Link>
+        </div>
+        <div className='w-1/2 text-[#262338] mx-auto text-center py-2 mb-10 rounded-lg bg-[#A8DB94]'>
+          <Link to={linkToPreview} className='text-3xl' target='_blank'>
+            <MdPreview className='inline mr-5 -mt-1' />
+            <span className=''>Preview</span>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }
