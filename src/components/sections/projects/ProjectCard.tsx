@@ -27,8 +27,8 @@ const ProjectCard: FunctionComponent<IProjectCardProps> = ({
   // TODO: Impliment tags. Each product is tagged with technologies. User able to filter by tag
   return (
     <div className='w-full lg:w-3/4 flex flex-col mx-auto bg-black bg-opacity-30 border border-[#7390A3]'>
-      <div className='flex w-full mx-auto'>
-        <div>
+      <div className='flex w-full mx-auto mt-10'>
+        <div className='mx-10'>
           <h2 className='text-4xl my-5'>{title}</h2>
           <p className='text-lg'>{desc}</p>
         </div>
