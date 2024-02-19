@@ -70,7 +70,7 @@ const About = () => {
           )}
           {tab === 'technologies' && (
             <div
-              className={`bg-black bg-opacity-30 px-5 py-3 border-b border-r border-l border-t border-[#7390A3] expand-down `}
+              className={`bg-black bg-opacity-30 px-5 py-3 border-b border-r border-l border-t border-[#7390A3] expand-down rounded-tr-lg rounded-br-lg rounded-bl-lg`}
               onClick={expandHandler}
             >
               <div className='flex'>
