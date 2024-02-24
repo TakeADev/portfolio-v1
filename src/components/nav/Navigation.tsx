@@ -42,7 +42,7 @@ const Navigation = () => {
           >
             <span>Contact Me</span>
           </NavLink>
-          <div className='flex ml-auto'>
+          <div className='flex ml-auto mb-10 lg:mb-0'>
             <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
               <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
                 <FaLinkedinIn className='text-3xl mx-auto' />
