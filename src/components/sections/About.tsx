@@ -1,4 +1,4 @@
-import { MouseEventHandler, useContext, useEffect, useState } from 'react'
+import { MouseEventHandler, useContext, useState } from 'react'
 
 import { AnimationContext } from '../../contexts/AnimationContext'
 
@@ -21,10 +21,6 @@ const About = () => {
   const expandHandler = () => {
     setToggleExpand(!toggleExpand)
   }
-
-  useEffect(() => {
-    console.log(toggleExpand)
-  }, [toggleExpand])
 
   return (
     !typeAnimationIsPlaying && (
