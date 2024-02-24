@@ -88,6 +88,11 @@
   animation-duration: 2s;
 }
 
+.fade-in-fast {
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+}
+
 .fade-in-half {
   animation-name: fade-in-half;
   animation-duration: 2s;
