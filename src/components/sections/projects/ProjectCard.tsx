@@ -66,14 +66,20 @@ const ProjectCard: FunctionComponent<IProjectCardProps> = ({
           </div>
         </div>
         <div className='flex w-full p-10'>
-          <img
-            src={imgSrc}
-            alt={imgAlt}
-            className=' top-0 w-full object-cover border border-[#7390A3] rounded-md'
-          />
+          <Link to={linkToPreview} target='_blank'>
+            <img
+              src={imgSrc}
+              alt={imgAlt}
+              className=' top-0 w-full object-cover border border-[#7390A3] rounded-md'
+            />
+          </Link>
         </div>
-        <div className='w-full flex flex-wrap -mt-2 mb-10 text-black ml-8 '>
-          {projectTags && projectTags.map((tag: string) => <Tag tagValue={tag} isActive={false} />)}
+        <div className='w-full flex flex-wrap -mt-2 mb-10 text-black ml-8 pr-8'>
+          {projectTags &&
+            projectTags.map((tag: string) => {
+              const isActive = activeTags.find((foundTag) => tag === foundTag) ? true : false
+              return <Tag tagValue={tag} isActive={isActive} key={tag} />
+            })}
         </div>
         <div>
           <div className='w-1/2 text-[#262338] mx-auto text-center py-2 mb-10 rounded-lg bg-[#C5A9BE] grow-on-hover'>
