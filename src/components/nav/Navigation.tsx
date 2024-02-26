@@ -22,9 +22,9 @@ const Navigation = () => {
 
   return (
     !typeAnimationIsPlaying && (
-      <div className={`fade-in fixed right-0 top-0 flex text-2xl bg-[#262338] bg-opacity-70`}>
+      <div className={`fade-in fixed right-0 top-0 flex text-2xl bg-[#262338] bg-opacity-70 mr-3`}>
         <MdOutlineMenu
-          className={`w-12 text-5xl mr-5 mt-2 lg:hidden ml-3 mb-2 ${menuIsOpen && ' rotate-left -rotate-90'}`}
+          className={`w-12 text-5xl mr- mt-2 lg:hidden ml-3 mb-2 ${menuIsOpen && ' rotate-left -rotate-90'}`}
           onClick={menuClickHandler}
         />
         <nav
@@ -38,7 +38,7 @@ const Navigation = () => {
           </NavLink>
           <NavLink
             to={`#`}
-            className={`mr-10 mt-8 mb-10 ml-10 p-2 border-2 border-[#7390A3] lg:-ml-2 hover:bg-slate-900`}
+            className={`mr-10 mt-8 mb-10 ml-10 p-2 border-2 border-[#7390A3] lg:-ml-2 hover:bg-black hover:bg-opacity-10 grow-on-hover`}
           >
             <span>Contact Me</span>
           </NavLink>
