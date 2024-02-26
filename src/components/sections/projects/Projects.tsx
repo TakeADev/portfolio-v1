@@ -22,10 +22,10 @@ const Projects = () => {
         <div className='w-full'>
           <div className='w-11/12 flex flex-wrap mb-10 text-black ml-12 '>
             {activeTags.map((tag) => (
-              <Tag tagValue={tag} isActive={true} />
+              <Tag tagValue={tag} isActive={true} key={tag} />
             ))}
             {inactiveTags.map((tag) => (
-              <Tag tagValue={tag} isActive={false} />
+              <Tag tagValue={tag} isActive={false} key={tag} />
             ))}
           </div>
         </div>
