@@ -77,7 +77,7 @@ const HeroText = () => {
       <Link to={`#`}>
         {!typeAnimationIsPlaying && (
           <div
-            className={`fade-in mx-auto lg:mx-0 p-4 border-2 border-[#7390A3] mt-20 w-64 lg:w-96 text-3xl lg:text- text-center`}
+            className={`fade-in mx-auto lg:mx-0 p-4 border-2 border-[#7390A3] mt-20 w-64 lg:w-96 text-3xl lg:text- text-center hover:bg-black hover:bg-opacity-10`}
           >
             <span>Contact Me</span>
           </div>

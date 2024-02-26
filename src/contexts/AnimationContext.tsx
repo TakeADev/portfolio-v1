@@ -4,13 +4,18 @@ interface IAnimationContext {
   typeAnimationIsPlaying: boolean
   setTypeAnimationIsPlaying: Dispatch<SetStateAction<boolean>>
 }
+interface IAnimationContextProviderProps {
+  children: React.ReactNode
+}
 
 export const AnimationContext = createContext<IAnimationContext>({
   typeAnimationIsPlaying: true,
   setTypeAnimationIsPlaying: () => {},
 })
 
-const AnimationProvider = ({ children }) => {
+const AnimationContextProvider: React.FunctionComponent<IAnimationContextProviderProps> = ({
+  children,
+}) => {
   const [typeAnimationIsPlaying, setTypeAnimationIsPlaying] = useState(true)
   return (
     <AnimationContext.Provider value={{ typeAnimationIsPlaying, setTypeAnimationIsPlaying }}>
@@ -19,4 +24,4 @@ const AnimationProvider = ({ children }) => {
   )
 }
 
-export default AnimationProvider
+export default AnimationContextProvider

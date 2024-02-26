@@ -1,4 +1,4 @@
-import { MouseEventHandler, useContext, useEffect, useState } from 'react'
+import { MouseEventHandler, useContext, useState } from 'react'
 
 import { AnimationContext } from '../../contexts/AnimationContext'
 
@@ -21,10 +21,6 @@ const About = () => {
   const expandHandler = () => {
     setToggleExpand(!toggleExpand)
   }
-
-  useEffect(() => {
-    console.log(toggleExpand)
-  }, [toggleExpand])
 
   return (
     !typeAnimationIsPlaying && (
@@ -61,16 +57,16 @@ const About = () => {
             >
               <p className='text-left mx-auto text-lg h-full leading-snug'>
                 I'm a Front-End React/TypeScript developer with 3+ years experience developing
-                personal projects.I love the constant learning and challenges that web development
-                provides.I'm hoping to join a team where I can be a valuable asset and collaborate
-                with other individuals that share the same level of passion that I do.In my free
-                time, I like to play board games, hang out with my dog, and build model kits.
+                personal projects. I love the constant learning and challenges that web development
+                provides. I'm hoping to join a team where I can be a valuable asset and collaborate
+                with experienced developers that share the same level of passion that I do. In my
+                free time, I like to play board games, hang out with my dog, and build model kits.
               </p>
             </div>
           )}
           {tab === 'technologies' && (
             <div
-              className={`bg-black bg-opacity-30 px-5 py-3 border-b border-r border-l border-t border-[#7390A3] expand-down `}
+              className={`bg-black bg-opacity-30 px-5 py-3 border-b border-r border-l border-t border-[#7390A3] expand-down rounded-tr-lg rounded-br-lg rounded-bl-lg`}
               onClick={expandHandler}
             >
               <div className='flex'>
