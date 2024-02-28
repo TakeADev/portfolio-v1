@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.17",
+    "dotenv": "^16.4.5",
+    "mailgun": "^0.5.0",
     "postcss": "^8.4.34",
     "prettier": "^3.2.5",
     "react": "^18.2.0",
