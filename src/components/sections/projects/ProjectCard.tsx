@@ -83,13 +83,13 @@ const ProjectCard: FunctionComponent<IProjectCardProps> = ({
         </div>
         <div>
           <div className='w-1/2 text-[#262338] mx-auto text-center py-2 mb-10 rounded-lg bg-[#C5A9BE] grow-on-hover'>
-            <Link to={linkToCode} className='text-3xl w-1/2' target='_blank'>
+            <Link to={linkToCode} className='text-xl md:text-3xl w-1/2' target='_blank'>
               <FaGithub className='inline mr-5 -mt-1' />
               <span className=''>Code</span>
             </Link>
           </div>
           <div className='w-1/2 text-[#262338] mx-auto text-center py-2 mb-10 rounded-lg bg-[#A8DB94] grow-on-hover'>
-            <Link to={linkToPreview} className='text-3xl' target='_blank'>
+            <Link to={linkToPreview} className='text-xl md:text-3xl' target='_blank'>
               <MdPreview className='inline mr-5 -mt-1' />
               <span className=''>Preview</span>
             </Link>
