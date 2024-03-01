@@ -2,6 +2,8 @@ import 'dotenv/config'
 import express from 'express'
 import ViteExpress from 'vite-express'
 
+import expressSanitizer from 'express-sanitizer'
+
 ViteExpress.config({ mode: 'development' })
 
 import nodemailer from 'nodemailer'
@@ -9,6 +11,7 @@ import mg from 'nodemailer-mailgun-transport'
 
 const app = express()
 app.use(express.json())
+app.use(expressSanitizer())
 
 const port = process.env.PORT
 
@@ -21,13 +24,18 @@ const emailAuth = {
 
 const nodemailerMailgun = nodemailer.createTransport(mg(emailAuth))
 
-const sendEmail = () => {
+const sendEmail = (firstName, lastName, email, phoneNumber, message) => {
   nodemailerMailgun.sendMail(
     {
       from: 'portfolio@chanceconway.com',
       to: 'chanceconwaydev@gmail.com',
-      subject: 'test subject',
-      text: 'This is the thest message',
+      subject: 'New contact form submission',
+      html: `
+      <p>${firstName} ${lastName}</p>
+      <p>${email}</p>
+      <p>${phoneNumber}</p>
+      <p>${message}</p>
+      `,
     },
     (err, info) => {
       if (err) {
@@ -37,11 +45,21 @@ const sendEmail = () => {
       }
     }
   )
+  console.log('email attempted to send')
 }
 
-app.post('/email', (req, res) => {
-  console.log('ok')
-  res.redirect('/')
+app.post('/', (req, res) => {
+  const sanitizedData = {
+    firstName: req.sanitize(req.body.firstName),
+    lastName: req.sanitize(req.body.lastName),
+    email: req.sanitize(req.body.email),
+    phoneNumber: req.sanitize(req.body.phoneNumber),
+    message: req.sanitize(req.body.message),
+  }
+  const { firstName, lastName, email, phoneNumber, message } = sanitizedData
+  console.log(firstName)
+  sendEmail(firstName, lastName, email, phoneNumber, message)
+  console.log('post reached')
 })
 
 ViteExpress.listen(app, port, () => console.log('Server is listening on PORT ' + port))
