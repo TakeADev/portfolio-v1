@@ -1,22 +1,35 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface IContactInputProps {
+  feild: string
+  setFormFeild: (feild: string, value: string) => void
   label: string
   required?: boolean
+  value: string
 }
 
-const ContactInput: React.FunctionComponent<IContactInputProps> = ({ label, required }) => {
+const ContactInput: React.FunctionComponent<IContactInputProps> = ({
+  feild,
+  setFormFeild,
+  label,
+  required,
+  value,
+}) => {
   const [isFocused, setIsFocused] = useState(false)
   const [inputValue, setInputValue] = useState('')
 
   const focusHandler = () => {
     setIsFocused(!isFocused)
-    inputValue.length > 0 && setIsFocused(true)
+    value.length > 0 && setIsFocused(true)
   }
 
   const changeHandler = (e: React.FormEvent<HTMLInputElement>) => {
     setInputValue(e.currentTarget.value)
   }
+
+  useEffect(() => {
+    setFormFeild && setFormFeild(feild, inputValue)
+  }, [inputValue])
 
   return (
     <div className='w-full relative mb-5 mr-10'>
@@ -32,7 +45,7 @@ const ContactInput: React.FunctionComponent<IContactInputProps> = ({ label, requ
           onFocus={focusHandler}
           onBlur={focusHandler}
           onChange={changeHandler}
-          value={inputValue}
+          value={value}
           required={required}
         />
       </div>
