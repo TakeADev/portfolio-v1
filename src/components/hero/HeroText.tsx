@@ -72,12 +72,12 @@ const HeroText = () => {
         <span className='text-[#A8DB94]'>{greenText}</span>
       </h1>
       <div className='w-3/4 mx-auto lg:w-full'>
-        <h2 className='text-gray-500 text-2xl lg:text-4xl mt-10'>{greyText}</h2>
+        <h2 className='text-gray-500 text-2xl lg:text-4xl mt-12'>{greyText}</h2>
       </div>
       <Link to={`#`}>
         {!typeAnimationIsPlaying && (
           <div
-            className={`fade-in mx-auto lg:mx-0 p-4 border-2 border-[#7390A3] mt-20 w-64 lg:w-96 text-3xl lg:text- text-center hover:bg-black hover:bg-opacity-10`}
+            className={`fade-in mx-auto lg:mx-0 p-4 border-2 border-[#7390A3] mt-16 w-64 lg:w-96 text-3xl lg:text- text-center hover:bg-black hover:bg-opacity-10`}
           >
             <span>Contact Me</span>
           </div>
