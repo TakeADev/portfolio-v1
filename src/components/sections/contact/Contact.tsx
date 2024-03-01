@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { AnimationContext } from '../../../contexts/AnimationContext'
 
 import ContactInput from './ContactInput'
+import { MdEmail } from 'react-icons/md'
 
 interface IFormFeilds {
   firstName: string
@@ -125,25 +126,33 @@ const Contact = () => {
                 value={textAreaValue}
               />
             </div>
-            <div className='flex ml-auto mb-10 lg:mb-0 relative'>
-              <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
-                <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                  <FaLinkedinIn className='text-3xl mx-auto' />
-                </div>
-              </Link>
-              <Link to={'https://github.com/TakeADev'} target='_blank'>
-                <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                  <FaGithub className='text-3xl mx-auto' />
-                </div>
-              </Link>
+            <div className='w-full mb-10 lg:mb-0 text-right'>
               <button
                 type='submit'
-                className='absolute right-0 mt-7 p-2 border-2 text-2xl border-[#7390A3] lg:-ml-2 hover:bg-black hover:bg-opacity-10 grow-on-hover'
+                className='mt-7 p-2 border-2 text-2xl border-[#7390A3] lg:-ml-2 hover:bg-black hover:bg-opacity-10 grow-on-hover'
               >
                 Submit
               </button>
             </div>
           </form>
+          <div className='flex w-11/12 lg:w-3/4 mx-auto relative'>
+            <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
+              <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
+                <FaLinkedinIn className='text-3xl mx-auto' />
+              </div>
+            </Link>
+            <Link to={'https://github.com/TakeADev'} target='_blank'>
+              <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
+                <FaGithub className='text-3xl mx-auto' />
+              </div>
+            </Link>
+            <Link to={'mailto:chanceconwaydev@gmail.com'}>
+              <div className='mt-10 text-xl hover:text-[#7390a3] absolute right-0 hover:text'>
+                <MdEmail className='inline mr-3 text-2xl' />
+                <span className=''>chanceconwaydev[at]gmail.com</span>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     )
