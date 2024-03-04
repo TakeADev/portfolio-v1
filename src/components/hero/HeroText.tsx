@@ -64,7 +64,7 @@ const HeroText = () => {
     greyText === text4 && setTypeAnimationIsPlaying(false)
   })
   return (
-    <div className='pt-24 lg:pt-[20vh] mx-auto text-center lg:mx-20 lg:text-left'>
+    <div className='pt-24 lg:pt-[24vh] mx-auto text-center lg:mx-20 lg:text-left'>
       <h1 className='text-7xl lg:text-9xl '>
         <span className='text-[#C5A9BE]'>{pinkText}</span>
         <span>{whiteText}</span>
@@ -72,7 +72,7 @@ const HeroText = () => {
         <span className='text-[#A8DB94]'>{greenText}</span>
       </h1>
       <div className='w-3/4 mx-auto lg:w-full'>
-        <h2 className='text-gray-500 text-2xl lg:text-4xl mt-12'>{greyText}</h2>
+        <h2 className='text-gray-500 text-[27px] lg:text-4xl mt-12'>{greyText}</h2>
       </div>
       <Link to={`#`}>
         {!typeAnimationIsPlaying && (
