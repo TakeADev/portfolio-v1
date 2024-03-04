@@ -43,7 +43,7 @@ const About = () => {
             Technologies
           </h2>
         </div>
-        <div className='overflow-y-hidden h-fit  mx-auto'>
+        <div className='overflow-y-hidden h-fit mx-auto'>
           {tab && tab === 'about' && (
             <div
               className={`bg-black bg-opacity-30 px-5 py-3 border-b lg:border-r lg:border-l border-t border-[#7390A3] expand-down lg:grid lg:grid-cols-2 items-center`}
@@ -54,12 +54,13 @@ const About = () => {
               </div>
               <div>
                 <p className='text-left mx-auto text-lg leading-snug '>
-                  I'm a Front-End React/TypeScript developer with 3+ years experience developing
-                  personal projects. I love the constant learning and challenges that web
-                  development provides. I'm hoping to join a team where I can be a valuable asset
-                  and collaborate with experienced developers that share the same level of passion
-                  that I do. In my free time, I like to play board games, hang out with my dog, and
-                  build model kits.
+                  I'm a Front-End React/TypeScript developer with 3+ years of experience developing
+                  personal projects. I love the solvable challenges that web development provides,
+                  along with the ability to constantly learn and improve my skill set. I believe I
+                  am a valuable asset to any team and look forward to collaborating with experienced
+                  developers that share my level of passion for web development. When I'm not coding
+                  projects, I enjoy playing board games, building model kits, and spending time with
+                  my dog.
                 </p>
               </div>
             </div>
