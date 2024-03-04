@@ -41,7 +41,7 @@ const ContactInput: React.FunctionComponent<IContactInputProps> = ({
       <div className='w-full'>
         <input
           type='text'
-          className='w-full bg-[#262338] border border-[#7390a3] pt-4 pl-2'
+          className='w-full bg-[#262338] border border-[#7390a3] pt-5 z-10 pl-2'
           onFocus={focusHandler}
           onBlur={focusHandler}
           onChange={changeHandler}
