@@ -19,8 +19,8 @@ const Projects = () => {
     !typeAnimationIsPlaying && (
       <>
         <h1 className='text-4xl text-center mb-16'>Projects</h1>
-        <div className='w-11/12 lg:w-3/4 2xl:w-3/5 mx-auto'>
-          <div className='flex flex-wrap mb-10 text-black ml-12 '>
+        <div className='w-full lg:w-3/4 2xl:w-3/5 mx-auto'>
+          <div className='flex flex-wrap w-full mb-10 text-black justify-start'>
             {activeTags.map((tag) => (
               <Tag tagValue={tag} isActive={true} key={tag} />
             ))}
@@ -29,7 +29,7 @@ const Projects = () => {
             ))}
           </div>
         </div>
-        <div className='w-11/12 lg:w-3/4 2xl:w-3/5 mx-auto grid grid-cols-1 gap-4 lg:grid-cols-2'>
+        <div className='w-full lg:w-3/4 2xl:w-3/5 mx-auto'>
           <ProjectCard
             title='MNUFC Social Club'
             desc='A social media platform dedicated to fans of Minnesota United Football Club. Users can create a profile, upload images, create posts, and interact with other users through comments, likes, and reposts.'
