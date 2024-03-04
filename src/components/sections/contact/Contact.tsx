@@ -119,7 +119,7 @@ const Contact = () => {
               </div>
               <textarea
                 rows={10}
-                className='w-full bg-[#262338] border border-[#7390a3] pt-5 pl-2'
+                className='w-full bg-[#262338] border border-[#7390a3] pl-2'
                 onFocus={focusHandler}
                 onBlur={focusHandler}
                 onChange={textAreaChangeHandler}
@@ -135,19 +135,21 @@ const Contact = () => {
               </button>
             </div>
           </form>
-          <div className='flex w-11/12 lg:w-3/4 mx-auto relative'>
-            <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
-              <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                <FaLinkedinIn className='text-3xl mx-auto' />
-              </div>
-            </Link>
-            <Link to={'https://github.com/TakeADev'} target='_blank'>
-              <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                <FaGithub className='text-3xl mx-auto' />
-              </div>
-            </Link>
-            <Link to={'mailto:chanceconwaydev@gmail.com'}>
-              <div className='mt-10 text-xl hover:text-[#7390a3] absolute right-0 hover:text'>
+          <div className='flex flex-col md:flex-row w-11/12 lg:w-3/4 mx-auto relative'>
+            <div className='flex'>
+              <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
+                <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
+                  <FaLinkedinIn className='text-3xl mx-auto' />
+                </div>
+              </Link>
+              <Link to={'https://github.com/TakeADev'} target='_blank'>
+                <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
+                  <FaGithub className='text-3xl mx-auto' />
+                </div>
+              </Link>
+            </div>
+            <Link to={'mailto:chanceconwaydev@gmail.com'} className=' w-full text-right'>
+              <div className='mt-10 w-full text-lg hover:text-[#7390a3] break-all'>
                 <MdEmail className='inline mr-3 text-2xl' />
                 <span className=''>chanceconwaydev[at]gmail.com</span>
               </div>
