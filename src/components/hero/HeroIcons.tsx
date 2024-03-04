@@ -5,7 +5,7 @@ import '../../animations/animations.css'
 
 const HeroIcons = () => {
   return (
-    <div className='fade-in mt-20 w-full lg:w-3/4 mx-auto flex flex-col lg:flex-row'>
+    <div className='fade-in mt-24 w-full lg:w-3/4 mx-auto flex flex-col lg:flex-row'>
       <div className='flex w-full lg:w-1/2'>
         <div className='w-1/3 text-center'>
           <SiTypescript className='text-5xl lg:text-7xl mb-2 mx-auto' />
