@@ -119,7 +119,7 @@ const Contact = () => {
               </div>
               <textarea
                 rows={10}
-                className='w-full bg-[#262338] border border-[#7390a3] pl-2'
+                className='w-full bg-[#262338] border border-[#7390a3] pt-5 pl-2'
                 onFocus={focusHandler}
                 onBlur={focusHandler}
                 onChange={textAreaChangeHandler}
