@@ -57,12 +57,12 @@ const ProjectCard: FunctionComponent<IProjectCardProps> = ({
   return (
     checkTags(activeTags, projectTags) && (
       <div
-        className={`w-full flex flex-col mx-auto lg:mb-8 bg-black bg-opacity-30 border-t border-b lg:border border-[#7390A3] fade-in-fast lg:grid lg:grid-cols-2 lg:items-center lg:py-28 px-10`}
+        className={`w-full flex flex-col mx-auto lg:mb-8 bg-black bg-opacity-30 border-t border-b lg:border border-[#7390A3] fade-in-fast lg:grid lg:grid-cols-2 lg:items-center lg:py-28 px-5`}
       >
         <div className='flex w-full mx-auto mt-0 '>
           <div className='lg:mr-10'>
             <h2 className='text-4xl lg:text-5xl my-5 lg:mb-16'>{title}</h2>
-            <p className='lg:text-lg lg:leading-tight'>{desc}</p>
+            <p className='lg:text-lg lg:leading-tight mb-10 lg:mb-0'>{desc}</p>
           </div>
         </div>
         <div className='lg:ml-10'>
@@ -83,7 +83,7 @@ const ProjectCard: FunctionComponent<IProjectCardProps> = ({
               })}
           </div>
           <div className='grid grid-cols-2'>
-            <Link to={linkToCode} className='text-xl md:text-2xl w-11/12 mx-auto' target='_blank'>
+            <Link to={linkToCode} className='text-xl md:text-2xl w-11/12 ' target='_blank'>
               <div className='w-full text-[#262338] mx-auto text-center py-2 mb-6 rounded-lg bg-[#C5A9BE] grow-on-hover'>
                 <FaGithub className='inline mr-2 -mt-1' />
                 <span className=''>Code</span>
@@ -91,7 +91,7 @@ const ProjectCard: FunctionComponent<IProjectCardProps> = ({
             </Link>
             <Link
               to={linkToPreview}
-              className='text-xl md:text-2xl w-11/12 mx-auto'
+              className='text-xl md:text-2xl w-11/12 ml-auto'
               target='_blank'
             >
               <div className='w-full text-[#262338] mx-auto text-center py-2 mb-6 rounded-lg bg-[#A8DB94] grow-on-hover'>
