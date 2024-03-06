@@ -1,4 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom'
+import { Element } from 'react-scroll'
 
 import AnimationContextProvider from './contexts/AnimationContext'
 import TagsContextProvider from './contexts/TagsContext'
@@ -18,9 +19,15 @@ function App() {
         <TagsContextProvider>
           <Navigation />
           <Hero />
-          <About />
-          <Projects />
-          <Contact />
+          <Element name='about'>
+            <About />
+          </Element>
+          <Element name='projects'>
+            <Projects />
+          </Element>
+          <Element name='contact'>
+            <Contact />
+          </Element>
         </TagsContextProvider>
       </AnimationContextProvider>
     </Router>
