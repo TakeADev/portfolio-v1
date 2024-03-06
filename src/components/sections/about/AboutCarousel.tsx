@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md'
@@ -9,8 +9,6 @@ import '../../../animations/animations.css'
 const AboutCarousel = () => {
   const [position, setPosition] = useState(0)
   const [leftOrRight, setLeftOrRight] = useState('carousel-slide-left')
-
-  const nodeRef = useRef(null)
 
   const slides = [
     { title: 'Languages', list: ['TypeScript', 'Javascript/ECMAScript', 'HTML5', 'CSS3'] },
@@ -33,12 +31,8 @@ const AboutCarousel = () => {
     position > 0 && setPosition(position - 1)
   }
 
-  useEffect(() => {
-    console.log(position)
-  }, [position])
-
   return (
-    <div className='h-full'>
+    <div className='h-80 lg:h-full'>
       <div className='flex h-[90%] overflow-x-hidden'>
         <div className='w-1/12 flex items-center z-10 cursor-pointer' onClick={previousSlide}>
           <MdKeyboardArrowLeft className='inline text-3xl' />
@@ -46,14 +40,14 @@ const AboutCarousel = () => {
         <div className='w-10/12 flex flex-col justify-center'>
           <SwitchTransition>
             <CSSTransition key={position} timeout={300} classNames={leftOrRight}>
-              <div className={''} ref={nodeRef}>
+              <div className={''}>
                 <div className='text-center text-2xl mb-5'>
                   <span>{slides[position].title}</span>
                 </div>
                 <div className='ml-10 lg:ml-16 text-lg'>
                   <ul className='list-disc'>
                     {slides[position].list.map((item) => (
-                      <li>{item}</li>
+                      <li key={item}>{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -66,9 +60,13 @@ const AboutCarousel = () => {
         </div>
       </div>
       <div className='h-[10%] text-xl flex items-center justify-center'>
-        <BsDash className='inline' />
-        <BsDash className='inline' />
-        <BsDash className='inline' />
+        {slides.map((_, index) => (
+          <BsDash
+            key={index}
+            id='index'
+            className={`inline ${index === position ? 'opacity-100' : 'opacity-50'}`}
+          />
+        ))}
       </div>
     </div>
   )
