@@ -4,7 +4,7 @@ import ViteExpress from 'vite-express'
 
 import expressSanitizer from 'express-sanitizer'
 
-ViteExpress.config({ mode: 'development' })
+ViteExpress.config({ mode: 'production' })
 
 import nodemailer from 'nodemailer'
 import mg from 'nodemailer-mailgun-transport'
