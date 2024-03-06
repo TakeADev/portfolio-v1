@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { AnimationContext } from '../../../contexts/AnimationContext'
 
 import ContactInput from './ContactInput'
+import { MdEmail } from 'react-icons/md'
 
 interface IFormFeilds {
   firstName: string
@@ -44,7 +45,7 @@ const Contact = () => {
     setFormFeilds({ ...formFeilds, [feild]: value })
   }
 
-  const submitHandler = (e) => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormFeilds(defaultFormFeilds)
     setTextAreaValue('')
@@ -68,7 +69,7 @@ const Contact = () => {
   return (
     !typeAnimationIsPlaying && (
       <div className='w-full mb-48'>
-        <div className='mx-auto w-11/12 xl:w-3/4 text-lg '>
+        <div className='mx-auto w-full 2xl:w-4/5 text-lg '>
           <form
             className='w-full lg:w-3/4 mx-auto mt-40 bg-black bg-opacity-30 p-10 border border-[#7390a3]'
             onSubmit={submitHandler}
@@ -125,7 +126,17 @@ const Contact = () => {
                 value={textAreaValue}
               />
             </div>
-            <div className='flex ml-auto mb-10 lg:mb-0 relative'>
+            <div className='w-full mb-10 lg:mb-0 text-right'>
+              <button
+                type='submit'
+                className='mt-7 p-2 border-2 text-2xl border-[#7390A3] lg:-ml-2 hover:bg-black hover:bg-opacity-10 grow-on-hover'
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+          <div className='flex flex-col md:flex-row w-11/12 lg:w-3/4 mx-auto relative'>
+            <div className='flex'>
               <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
                 <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
                   <FaLinkedinIn className='text-3xl mx-auto' />
@@ -136,14 +147,14 @@ const Contact = () => {
                   <FaGithub className='text-3xl mx-auto' />
                 </div>
               </Link>
-              <button
-                type='submit'
-                className='absolute right-0 mt-7 p-2 border-2 text-2xl border-[#7390A3] lg:-ml-2 hover:bg-black hover:bg-opacity-10 grow-on-hover'
-              >
-                Submit
-              </button>
             </div>
-          </form>
+            <Link to={'mailto:chanceconwaydev@gmail.com'} className=' w-full text-right'>
+              <div className='mt-10 w-full text-lg hover:text-[#7390a3] break-all'>
+                <MdEmail className='inline mr-3 text-2xl' />
+                <span className=''>chanceconwaydev[at]gmail.com</span>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     )

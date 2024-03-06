@@ -19,7 +19,7 @@ const Hero = () => {
   }
 
   return (
-    <div className='w-full '>
+    <div className='w-full'>
       <HeroText />
       {!typeAnimationIsPlaying && (
         <>
