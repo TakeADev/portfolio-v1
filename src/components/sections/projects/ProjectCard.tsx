@@ -61,7 +61,7 @@ const ProjectCard: FunctionComponent<IProjectCardProps> = ({
       >
         <div className='flex w-full mx-auto mt-0 '>
           <div className='lg:mr-10'>
-            <h2 className='text-4xl lg:text-5xl my-5 lg:mb-16'>{title}</h2>
+            <h3 className='text-4xl lg:text-5xl my-5 lg:mb-16'>{title}</h3>
             <p className='lg:text-lg lg:leading-tight mb-10 lg:mb-0'>{desc}</p>
           </div>
         </div>
