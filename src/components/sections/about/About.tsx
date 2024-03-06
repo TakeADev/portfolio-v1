@@ -28,7 +28,7 @@ const About = () => {
 
   return (
     !typeAnimationIsPlaying && (
-      <div className='mt-40 w-full lg:w-3/4 2xl:w-3/5 mx-auto mb-48 rounded-lg '>
+      <div className='mt-40 w-full lg:w-3/4 2xl:w-3/5 mx-auto mb-48 rounded-lg'>
         <div className='flex'>
           <h2
             className={`text-xl lg:text-2xl text-[#C5A9BE] bg-${tab === 'about' ? 'black' : 'gray-900'} bg-opacity-30 border-b border-b-gray-900 -mb-[1px] px-5 py-2 rounded-tl-lg border-t border-l border-r border-[#7390A3]  cursor-pointer ${tab !== 'about' && 'hover:bg-black hover:bg-opacity-10'}`}
@@ -52,7 +52,7 @@ const About = () => {
               <div>
                 <img src={webDeveloperImage} alt='Web Developer' className='p-10' />
               </div>
-              <div>
+              <div className='mb-5 lg:mb-0'>
                 <p className='text-left mx-auto text-lg leading-snug '>
                   I'm a Front-End React/TypeScript developer with 3+ years of experience developing
                   personal projects. I love the solvable challenges that web development provides,
