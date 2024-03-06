@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     !typeAnimationIsPlaying && (
       <>
-        <h1 className='text-4xl text-center mb-16'>Projects</h1>
+        <h2 className='text-4xl text-center mb-16'>Projects</h2>
         <div className='w-full lg:w-3/4 2xl:w-3/5 mx-auto'>
           <div className='flex flex-wrap w-full px-5 mb-10 text-black justify-start'>
             {activeTags.map((tag) => (
