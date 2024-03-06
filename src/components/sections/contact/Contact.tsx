@@ -45,7 +45,7 @@ const Contact = () => {
     setFormFeilds({ ...formFeilds, [feild]: value })
   }
 
-  const submitHandler = (e) => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormFeilds(defaultFormFeilds)
     setTextAreaValue('')
@@ -69,7 +69,7 @@ const Contact = () => {
   return (
     !typeAnimationIsPlaying && (
       <div className='w-full mb-48'>
-        <div className='mx-auto w-11/12 xl:w-3/4 text-lg '>
+        <div className='mx-auto w-full 2xl:w-4/5 text-lg '>
           <form
             className='w-full lg:w-3/4 mx-auto mt-40 bg-black bg-opacity-30 p-10 border border-[#7390a3]'
             onSubmit={submitHandler}
