@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
+import { Link as ScrollLink } from 'react-scroll'
 import { Link } from 'react-router-dom'
 
 import { AnimationContext } from '../../contexts/AnimationContext'
@@ -74,15 +75,15 @@ const HeroText = () => {
       <div className='w-3/4 mx-auto lg:w-full'>
         <h2 className='text-gray-500 text-[27px] lg:text-4xl mt-12'>{greyText}</h2>
       </div>
-      <Link to={`#`}>
-        {!typeAnimationIsPlaying && (
+      {!typeAnimationIsPlaying && (
+        <ScrollLink to='contact' smooth={true} duration={200}>
           <div
-            className={`fade-in mx-auto lg:mx-0 p-4 border-2 border-[#7390A3] mt-16 w-64 lg:w-96 text-3xl lg:text- text-center hover:bg-black hover:bg-opacity-10`}
+            className={`fade-in mx-auto lg:mx-0 p-4 border-2 border-[#7390A3] mt-16 w-64 lg:w-96 text-3xl lg:text- text-center hover:bg-black hover:bg-opacity-10 cursor-pointer`}
           >
             <span>Contact Me</span>
           </div>
-        )}
-      </Link>
+        </ScrollLink>
+      )}
     </div>
   )
 }
