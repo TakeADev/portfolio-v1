@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
-import { Link } from 'react-router-dom'
 
 import { AnimationContext } from '../../contexts/AnimationContext'
 

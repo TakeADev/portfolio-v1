@@ -23,7 +23,7 @@ const Navigation = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', (e) => {
+    window.addEventListener('scroll', () => {
       if (scrollY !== 0) {
         setScrolled(true)
       } else {
