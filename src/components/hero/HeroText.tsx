@@ -65,6 +65,7 @@ const HeroText = () => {
   })
   return (
     <div className='pt-24 lg:pt-[24vh] mx-auto text-center lg:mx-20 lg:text-left'>
+      <span>bar</span>
       <h1 className='text-7xl lg:text-9xl '>
         <span className='text-[#C5A9BE]'>{pinkText}</span>
         <span>{whiteText}</span>
