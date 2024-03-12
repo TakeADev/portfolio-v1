@@ -28,32 +28,32 @@ const About = () => {
 
   return (
     !typeAnimationIsPlaying && (
-      <div className='mt-40 w-full lg:w-3/4 2xl:w-3/5 mx-auto mb-48 rounded-lg'>
+      <div className='mx-auto mb-48 mt-40 w-full rounded-lg lg:w-3/4 2xl:w-3/5'>
         <div className='flex'>
           <h2
-            className={`text-xl lg:text-2xl text-[#C5A9BE] bg-${tab === 'about' ? 'black' : 'gray-900'} bg-opacity-30 border-b border-b-gray-900 -mb-[1px] px-5 py-2 rounded-tl-lg border-t border-l border-r border-[#7390A3]  cursor-pointer ${tab !== 'about' && 'hover:bg-black hover:bg-opacity-10'}`}
+            className={`text-xl text-[#C5A9BE] lg:text-2xl bg-${tab === 'about' ? 'black' : 'gray-900'} -mb-[1px] cursor-pointer rounded-tl-lg border-b border-l border-r border-t border-[#7390A3] border-b-gray-900 bg-opacity-30 px-5  py-2 ${tab !== 'about' && 'hover:bg-black hover:bg-opacity-10'}`}
             onClick={tabHandler}
           >
             About Me
           </h2>
           <h2
-            className={`text-xl lg:text-2xl text-[#C5A9BE] bg-${tab === 'technologies' ? 'black' : 'gray-900'} bg-opacity-30 border-b border-b-gray-900 -mb-[1px] px-5 py-2 rounded-tr-lg border-t border-r border-[#7390A3] cursor-pointer ${tab !== 'technologies' && 'hover:bg-black hover:bg-opacity-10'}`}
+            className={`text-xl text-[#C5A9BE] lg:text-2xl bg-${tab === 'technologies' ? 'black' : 'gray-900'} -mb-[1px] cursor-pointer rounded-tr-lg border-b border-r border-t border-[#7390A3] border-b-gray-900 bg-opacity-30 px-5 py-2 ${tab !== 'technologies' && 'hover:bg-black hover:bg-opacity-10'}`}
             onClick={tabHandler}
           >
             Technologies
           </h2>
         </div>
-        <div className='overflow-y-hidden h-fit mx-auto'>
+        <div className='mx-auto h-fit overflow-y-hidden'>
           {tab && tab === 'about' && (
             <div
-              className={`bg-black bg-opacity-30 px-5 py-3 border-b lg:border-r lg:border-l border-t border-[#7390A3] expand-down lg:grid lg:grid-cols-2 items-center`}
+              className={`expand-down items-center border-b border-t border-[#7390A3] bg-black bg-opacity-30 px-5 py-3 lg:grid lg:grid-cols-2 lg:border-l lg:border-r`}
               onClick={expandHandler}
             >
               <div>
                 <img src={webDeveloperImage} alt='Web Developer' className='p-10' />
               </div>
               <div className='mb-5 lg:mb-0'>
-                <p className='text-left mx-auto text-lg leading-snug '>
+                <p className='mx-auto text-left text-lg leading-snug '>
                   I'm a Front-End React/TypeScript developer with 3+ years of experience developing
                   personal projects. I love the solvable challenges that web development provides,
                   along with the ability to constantly learn and improve my skill set. I believe I
@@ -67,7 +67,7 @@ const About = () => {
           )}
           {tab === 'technologies' && (
             <div
-              className={`bg-black bg-opacity-30 px-5 py-3 border-b lg:border-r lg:border-l border-t border-[#7390A3] expand-down lg:grid lg:grid-cols-2`}
+              className={`expand-down border-b border-t border-[#7390A3] bg-black bg-opacity-30 px-5 py-3 lg:grid lg:grid-cols-2 lg:border-l lg:border-r`}
               onClick={expandHandler}
             >
               <div>

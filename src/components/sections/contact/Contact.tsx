@@ -68,20 +68,20 @@ const Contact = () => {
 
   return (
     !typeAnimationIsPlaying && (
-      <div className='w-full mb-48'>
-        <div className='mx-auto w-full 2xl:w-4/5 text-lg '>
+      <div className='mb-48 w-full'>
+        <div className='mx-auto w-full text-lg 2xl:w-4/5 '>
           <form
-            className='w-full lg:w-3/4 mx-auto mt-40 bg-black bg-opacity-30 p-10 border border-[#7390a3]'
+            className='mx-auto mt-40 w-full border border-[#7390a3] bg-black bg-opacity-30 p-10 lg:w-3/4'
             onSubmit={submitHandler}
           >
-            <h2 className='text-3xl mb-10'>Send Me an Email</h2>
+            <h2 className='mb-10 text-3xl'>Send Me an Email</h2>
 
             {emailSent && (
               <div className='mb-10'>
-                <span className='text-xl text-[#c5a9be] mb-10'>Email was sent.</span>
+                <span className='mb-10 text-xl text-[#c5a9be]'>Email was sent.</span>
               </div>
             )}
-            <div className='w-full flex flex-col lg:flex-row'>
+            <div className='flex w-full flex-col lg:flex-row'>
               <ContactInput
                 feild='firstName'
                 setFormFeild={setFormFeild}
@@ -96,7 +96,7 @@ const Contact = () => {
                 value={formFeilds.lastName}
               />
             </div>
-            <div className='w-full flex flex-col lg:flex-row'>
+            <div className='flex w-full flex-col lg:flex-row'>
               <ContactInput
                 feild='email'
                 setFormFeild={setFormFeild}
@@ -113,44 +113,44 @@ const Contact = () => {
             </div>
             <div>
               <div
-                className={`absolute transition ease-in-out ${isFocused && 'text-[#7390a3] -translate-y-[3%] -translate-x-[10%] scale-75'} `}
+                className={`absolute transition ease-in-out ${isFocused && '-translate-x-[10%] -translate-y-[3%] scale-75 text-[#7390a3]'} `}
               >
                 <label className='ml-2'>Message</label>
               </div>
               <textarea
                 rows={10}
-                className='w-full bg-[#262338] border border-[#7390a3] pt-5 pl-2'
+                className='w-full border border-[#7390a3] bg-[#262338] pl-2 pt-5'
                 onFocus={focusHandler}
                 onBlur={focusHandler}
                 onChange={textAreaChangeHandler}
                 value={textAreaValue}
               />
             </div>
-            <div className='w-full mb-10 lg:mb-0 text-right'>
+            <div className='mb-10 w-full text-right lg:mb-0'>
               <button
                 type='submit'
-                className='mt-7 p-2 border-2 text-2xl border-[#7390A3] lg:-ml-2 hover:bg-black hover:bg-opacity-10 grow-on-hover'
+                className='grow-on-hover mt-7 border-2 border-[#7390A3] p-2 text-2xl hover:bg-black hover:bg-opacity-10 lg:-ml-2'
               >
                 Submit
               </button>
             </div>
           </form>
-          <div className='flex flex-col md:flex-row w-11/12 lg:w-3/4 mx-auto relative'>
+          <div className='relative mx-auto flex w-11/12 flex-col md:flex-row lg:w-3/4'>
             <div className='flex'>
               <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
-                <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                  <FaLinkedinIn className='text-3xl mx-auto' />
+                <div className='grow-on-hover mr-10 mt-7 w-14 rounded-full bg-[#7390a3] bg-opacity-50 p-3'>
+                  <FaLinkedinIn className='mx-auto text-3xl' />
                 </div>
               </Link>
               <Link to={'https://github.com/TakeADev'} target='_blank'>
-                <div className='bg-[#7390a3] mr-10 mt-7 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                  <FaGithub className='text-3xl mx-auto' />
+                <div className='grow-on-hover mr-10 mt-7 w-14 rounded-full bg-[#7390a3] bg-opacity-50 p-3'>
+                  <FaGithub className='mx-auto text-3xl' />
                 </div>
               </Link>
             </div>
             <Link to={'mailto:chanceconwaydev@gmail.com'} className=' w-full text-right'>
-              <div className='mt-10 w-full text-lg hover:text-[#7390a3] break-all'>
-                <MdEmail className='inline mr-3 text-2xl' />
+              <div className='mt-10 w-full break-all text-lg hover:text-[#7390a3]'>
+                <MdEmail className='mr-3 inline text-2xl' />
                 <span className=''>chanceconwaydev[at]gmail.com</span>
               </div>
             </Link>

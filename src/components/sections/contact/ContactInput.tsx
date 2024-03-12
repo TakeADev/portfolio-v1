@@ -32,16 +32,16 @@ const ContactInput: React.FunctionComponent<IContactInputProps> = ({
   }, [inputValue])
 
   return (
-    <div className='w-full relative mb-5 mr-10'>
+    <div className='relative mb-5 mr-10 w-full'>
       <div
-        className={`absolute transition ease-in-out ${isFocused && 'text-[#7390a3] -translate-y-[3%] -translate-x-[10%] scale-75'} `}
+        className={`absolute transition ease-in-out ${isFocused && '-translate-x-[10%] -translate-y-[3%] scale-75 text-[#7390a3]'} `}
       >
         <label className='ml-2'>{label}</label>
       </div>
       <div className='w-full'>
         <input
           type='text'
-          className='w-full bg-[#262338] border border-[#7390a3] pt-5 z-10 pl-2'
+          className='z-10 w-full border border-[#7390a3] bg-[#262338] pl-2 pt-5'
           onFocus={focusHandler}
           onBlur={focusHandler}
           onChange={changeHandler}

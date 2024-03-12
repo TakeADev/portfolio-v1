@@ -37,10 +37,10 @@ const Tag: React.FunctionComponent<ITagProps> = ({ tagValue, isActive }) => {
 
   return (
     <div
-      className={`${isActive ? 'bg-[#C5A9BE]' : 'bg-[#7390A3]'} mt-2 rounded-lg pl-2 pr-3 grow-on-hover hover:cursor-pointer mr-3 text-sm `}
+      className={`${isActive ? 'bg-[#C5A9BE]' : 'bg-[#7390A3]'} grow-on-hover mr-3 mt-2 rounded-lg pl-2 pr-3 text-sm hover:cursor-pointer `}
       onClick={tagClickHandler}
     >
-      <FaTag className='inline mr-2 p-0.5' />
+      <FaTag className='mr-2 inline p-0.5' />
       <span>{tagValue}</span>
     </div>
   )

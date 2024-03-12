@@ -25,7 +25,7 @@ const Hero = () => {
         <>
           <HeroIcons />
           <FaChevronDown
-            className={`fade-in-half sticky bottom-0 text-7xl mx-auto mt-36 ${!fadingIn && 'better-bounce'} opacity-50`}
+            className={`fade-in-half sticky bottom-0 mx-auto mt-36 text-7xl ${!fadingIn && 'better-bounce'} opacity-50`}
             onAnimationEnd={queueBounce}
           />
         </>

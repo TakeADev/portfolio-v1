@@ -35,20 +35,20 @@ const Navigation = () => {
   return (
     !typeAnimationIsPlaying && (
       <div
-        className={`fade-in fixed right-0 top-0 flex text-xl xl:text-2xl bg-[#262338] bg-opacity-70 mr-3 z-20 ${scrolled ? 'transition lg:py-3' : 'lg:py-8'} `}
+        className={`fade-in fixed right-0 top-0 z-20 mr-3 flex bg-[#262338] bg-opacity-70 text-xl xl:text-2xl ${scrolled ? 'transition lg:py-3' : 'lg:py-8'} `}
       >
         <MdOutlineMenu
-          className={`w-12 cursor-pointer text-5xl mr-3 mt-2 lg:hidden ml-3 mb-2 ${menuIsOpen && ' rotate-left -rotate-90 '}`}
+          className={`mb-2 ml-3 mr-3 mt-2 w-12 cursor-pointer text-5xl lg:hidden ${menuIsOpen && ' rotate-left -rotate-90 '}`}
           onClick={menuClickHandler}
         />
         <nav
-          className={`${!menuIsOpen && 'hidden '} ${toggleSlide && 'slide-left '}flex flex-col text-right bg-[] lg:flex lg:flex-row `}
+          className={`${!menuIsOpen && 'hidden '} ${toggleSlide && 'slide-left '}flex flex-col bg-[] text-right lg:flex lg:flex-row `}
         >
           <ScrollLink
             to='projects'
             smooth={true}
             duration={200}
-            className={`ml-10 mr-10 mt-[42px] lg:mt-[13px] grow-on-hover cursor-pointer`}
+            className={`grow-on-hover ml-10 mr-10 mt-[42px] cursor-pointer lg:mt-[13px]`}
           >
             <span>Projects</span>
           </ScrollLink>
@@ -56,7 +56,7 @@ const Navigation = () => {
             to='about'
             smooth={true}
             duration={200}
-            className={`mr-10 mt-[42px] lg:mt-[13px] grow-on-hover cursor-pointer`}
+            className={`grow-on-hover mr-10 mt-[42px] cursor-pointer lg:mt-[13px]`}
           >
             <span>About</span>
           </ScrollLink>
@@ -64,19 +64,19 @@ const Navigation = () => {
             to='contact'
             smooth={true}
             duration={200}
-            className={`mr-10 mt-8 lg:mt-0 mb-10 lg:mb-0 ml-10 px-2 py-3 border-2 border-[#7390A3] lg:-ml-2 hover:bg-black hover:bg-opacity-10 grow-on-hover cursor-pointer`}
+            className={`grow-on-hover mb-10 ml-10 mr-10 mt-8 cursor-pointer border-2 border-[#7390A3] px-2 py-3 hover:bg-black hover:bg-opacity-10 lg:-ml-2 lg:mb-0 lg:mt-0`}
           >
             <span>Contact Me</span>
           </ScrollLink>
-          <div className='flex ml-auto mb-10 lg:mb-0'>
+          <div className='mb-10 ml-auto flex lg:mb-0'>
             <Link to={'https://www.linkedin.com/in/chance-conway-5b687828b/'} target='_blank'>
-              <div className='bg-[#7390a3] mr-10 mt-7 lg:mt-0 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                <FaLinkedinIn className='text-3xl mx-auto' />
+              <div className='grow-on-hover mr-10 mt-7 w-14 rounded-full bg-[#7390a3] bg-opacity-50 p-3 lg:mt-0'>
+                <FaLinkedinIn className='mx-auto text-3xl' />
               </div>
             </Link>
             <Link to={'https://github.com/TakeADev'} target='_blank'>
-              <div className='bg-[#7390a3] mr-10 mt-7 lg:mt-0 p-3 rounded-full grow-on-hover bg-opacity-50 w-14'>
-                <FaGithub className='text-3xl mx-auto' />
+              <div className='grow-on-hover mr-10 mt-7 w-14 rounded-full bg-[#7390a3] bg-opacity-50 p-3 lg:mt-0'>
+                <FaGithub className='mx-auto text-3xl' />
               </div>
             </Link>
           </div>

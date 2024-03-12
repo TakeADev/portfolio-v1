@@ -34,17 +34,17 @@ const AboutCarousel = () => {
   return (
     <div className='h-80 lg:h-full'>
       <div className='flex h-[90%] overflow-x-hidden'>
-        <div className='w-1/12 flex items-center z-10 cursor-pointer' onClick={previousSlide}>
+        <div className='z-10 flex w-1/12 cursor-pointer items-center' onClick={previousSlide}>
           <MdKeyboardArrowLeft className='inline text-3xl' />
         </div>
-        <div className='w-10/12 flex flex-col justify-center'>
+        <div className='flex w-10/12 flex-col justify-center'>
           <SwitchTransition>
             <CSSTransition key={position} timeout={300} classNames={leftOrRight}>
               <div className={''}>
-                <div className='text-center text-2xl mb-5'>
+                <div className='mb-5 text-center text-2xl'>
                   <span>{slides[position].title}</span>
                 </div>
-                <div className='ml-10 lg:ml-16 text-lg'>
+                <div className='ml-10 text-lg lg:ml-16'>
                   <ul className='list-disc'>
                     {slides[position].list.map((item) => (
                       <li key={item}>{item}</li>
@@ -55,11 +55,11 @@ const AboutCarousel = () => {
             </CSSTransition>
           </SwitchTransition>
         </div>
-        <div className='w-1/12 flex items-center cursor-pointer z-10' onClick={nextSlide}>
+        <div className='z-10 flex w-1/12 cursor-pointer items-center' onClick={nextSlide}>
           <MdKeyboardArrowRight className='text-3xl' />
         </div>
       </div>
-      <div className='h-[10%] text-xl flex items-center justify-center'>
+      <div className='flex h-[10%] items-center justify-center text-xl'>
         {slides.map((_, index) => (
           <BsDash
             key={index}
