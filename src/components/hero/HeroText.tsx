@@ -55,7 +55,7 @@ const HeroText = () => {
     const text1 = 'Hi, '
     const text2 = "I'm "
     const text3 = 'Chance Conway'
-    const text4 = 'Front-End React/TypeScript Developer'
+    const text4 = 'Full Stack Web Developer'
 
     loopText(pinkIndex, text1, 'pinkText', 'pinkIndex', 50)
     pinkText === text1 && loopText(whiteIndex, text2, 'whiteText', 'whiteIndex', 50)
