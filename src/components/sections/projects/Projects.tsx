@@ -5,7 +5,7 @@ import { AnimationContext } from '../../../contexts/AnimationContext'
 import ProjectCard from './ProjectCard'
 import Tag from './Tag'
 
-import portfolioScreenshot from '../../../assets/Screenshot 2024-03-15 110604.png'
+import portfolioScreenshot from '../../../assets/Screenshot 2024-03-15 132335.png'
 import mnuscScreenshot from '../../../assets/Screenshot 2024-02-19 064023.png'
 import blogZoneScreenshot from '../../../assets/Screenshot 2024-02-19 064133.png'
 import crwnClotingScreenshot from '../../../assets/Screenshot 2024-02-22 115353.png'
