@@ -5,6 +5,7 @@ import { AnimationContext } from '../../../contexts/AnimationContext'
 import ProjectCard from './ProjectCard'
 import Tag from './Tag'
 
+import portfolioScreenshot from '../../../assets/Screenshot 2024-03-15 110604.png'
 import mnuscScreenshot from '../../../assets/Screenshot 2024-02-19 064023.png'
 import blogZoneScreenshot from '../../../assets/Screenshot 2024-02-19 064133.png'
 import crwnClotingScreenshot from '../../../assets/Screenshot 2024-02-22 115353.png'
@@ -30,6 +31,15 @@ const Projects = () => {
           </div>
         </div>
         <div className='mx-auto w-full lg:w-3/4 2xl:w-3/5'>
+          <ProjectCard
+            title='Portfolio'
+            desc='Personal portfolio website showcasing various projects and contact information. Features a sleek design with full mobile responsiveness, custom animations, a custom tag/filter feature for the projects section, and a contact form.'
+            projectTags={['full-stack', 'typescript', 'react', 'tailwindcss', 'express']}
+            imgSrc={portfolioScreenshot}
+            imgAlt='Portfolio Website Screenshot'
+            linkToCode='https://github.com/TakeADev/portfolio-v1'
+            linkToPreview='/'
+          />
           <ProjectCard
             title='MNUFC Social Club'
             desc='A social media platform dedicated to fans of Minnesota United Football Club. Users can create a profile, upload images, create posts, and interact with other users through comments, likes, and reposts.'
