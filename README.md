@@ -13,7 +13,7 @@ Personal portfolio website showcasing various projects and contact information. 
 
 https://portfolio-v1-wlpm.onrender.com
 
-![Screenshot 2024-03-07 114136](https://github.com/TakeADev/portfolio-v1/assets/106417346/2af158b1-dc93-43bc-bc2a-a39067a0dd82)
+![Screenshot 2024-03-15 132335](https://github.com/TakeADev/portfolio-v1/assets/106417346/eceb90af-d935-41c8-b2b0-913ce6be824d)
 
 ### Build
 
