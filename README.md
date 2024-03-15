@@ -31,4 +31,4 @@ To build the project:
 
 [Linkedin](linkedin.com/in/chance-conway-5b687828b)
 
-[email](chanceconwaydev@gmail.com)
+[Email](chanceconwaydev@gmail.com)
