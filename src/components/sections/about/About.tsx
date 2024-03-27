@@ -54,7 +54,7 @@ const About = () => {
               </div>
               <div className='mb-5 lg:mb-0'>
                 <p className='mx-auto text-left text-lg leading-snug '>
-                  I'm a Front-End React/TypeScript developer with 3+ years of experience developing
+                  I'm a Full Stack React/TypeScript developer with 3+ years of experience developing
                   personal projects. I love the solvable challenges that web development provides,
                   along with the ability to constantly learn and improve my skill set. I believe I
                   am a valuable asset to any team and look forward to collaborating with experienced
